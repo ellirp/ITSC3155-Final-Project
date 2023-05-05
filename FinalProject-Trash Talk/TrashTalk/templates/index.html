@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Posts</title>
+</head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<body>
+    <div class="my-image">
+        <div class= "center">
+            <h1>Trash Talk</h1>
+            <h4>A website made for your opinion :D</h4>
+            <ul>
+                {% for post in posts %}
+                    <li><strong>{{ post['username'] }}</strong>: {{ post['text'] }}</li>
+                    <ul>
+                        {% for comment in comments[post['text']] %}
+                            <li><strong>{{ comment['username'] }}</strong>: {{ comment['text'] }}</li>
+                        {% endfor %}
+                    </ul>
+                    <form action="/comment/{{ post['text'] }}" method="get">
+                        <input type="submit" value="Add comment">
+                    </form>
+                {% endfor %}
+            </ul>
+            <h4>State your opinion:</h4>
+            <form action="/post" method="post">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username">
+                <br>
+                <label for="post-text">Post:</label>
+                <textarea name="post-text" id="post-text"></textarea>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

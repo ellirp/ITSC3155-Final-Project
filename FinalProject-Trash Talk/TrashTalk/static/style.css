@@ -1,0 +1,67 @@
+/* index.html styles */
+body {
+  background-color: #242424;
+  color: #00ffb8;
+  font-family: Arial, sans-serif;
+}
+
+/* Raccoon Background */
+.my-image {
+  background-image: url("Raccoon background.png");
+  background-size: cover;
+  opacity: 0.7; /* customizable opacity */
+}
+
+.center {
+  margin: auto;
+  width: 600px;
+  height: 1000px;
+}
+
+.post-container {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.comment-container {
+  border: 1px solid #eee;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+/* post.html and comment.html styles */
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type=text],
+textarea {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  color: black; 
+}
+
+/* buttons */
+input[type=submit] {
+  background-color: #868686;
+  color: #fff; 
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #868686;
+}
+
